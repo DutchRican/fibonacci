@@ -33,9 +33,11 @@ fn fib(count: usize, map: &mut HashMap<usize, u128>) -> u128 {
 }
 
 fn main() {
+    const MAX: usize = 185;
+
     let count: usize = get_clean_arg();
-    if count > 185 {
-        println!("The maximum is 185");
+    if count > MAX {
+        println!("The maximum is {}", MAX);
         return
     }
     let mut map: HashMap<usize, u128> = HashMap::new();
